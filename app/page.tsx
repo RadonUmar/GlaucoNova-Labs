@@ -62,12 +62,14 @@ export default function GlaucoNovaLabs() {
               >
                 Contact
               </button>
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white"
+              <a
+                href="https://calendly.com/sohamchakraborty03/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white"
               >
                 Request Demo
-              </Button>
+              </a>
             </nav>
 
             {/* Mobile Menu Button */}
