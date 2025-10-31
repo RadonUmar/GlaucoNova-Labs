@@ -51,7 +51,7 @@ export default function GlaucoNovaLabs() {
                 Technology
               </button>
               <button
-                onClick={() => scrollToSection("research")}
+                onClick={() => scrollToSection("science-behind")}
                 className="text-gray-700 hover:text-primary transition-colors"
               >
                 Research
@@ -66,7 +66,7 @@ export default function GlaucoNovaLabs() {
                 href="https://calendly.com/sohamchakraborty03/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white"
               >
                 Request Demo
               </a>
@@ -105,7 +105,7 @@ export default function GlaucoNovaLabs() {
                   Technology
                 </button>
                 <button
-                  onClick={() => scrollToSection("research")}
+                  onClick={() => scrollToSection("science-behind")}
                   className="text-left text-gray-700 hover:text-primary transition-colors"
                 >
                   Research
@@ -118,7 +118,7 @@ export default function GlaucoNovaLabs() {
                 </button>
                 <Button
                   size="sm"
-                  className="w-fit bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white"
+                  className="w-fit bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white"
                 >
                   Request Demo
                 </Button>
@@ -140,7 +140,7 @@ export default function GlaucoNovaLabs() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
           }}
-          className="absolute top-32 right-20 w-24 h-24 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-full blur-xl opacity-60"
+          className="absolute top-32 right-20 w-24 h-24 bg-linear-to-r from-cyan-100 to-blue-100 rounded-full blur-xl opacity-60"
         />
         <motion.div
           animate={{
@@ -152,7 +152,7 @@ export default function GlaucoNovaLabs() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
           }}
-          className="absolute bottom-32 left-20 w-32 h-32 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur-xl opacity-60"
+          className="absolute bottom-32 left-20 w-32 h-32 bg-linear-to-r from-purple-100 to-pink-100 rounded-full blur-xl opacity-60"
         />
 
         <div className="relative z-10 container mx-auto px-4">
@@ -187,7 +187,7 @@ export default function GlaucoNovaLabs() {
                   href="https://calendly.com/sohamchakraborty03/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg h-12 px-8 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white border-0 shadow-lg shadow-cyan-500/25 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg h-12 px-8 py-6 bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white border-0 shadow-lg shadow-cyan-500/25 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
                 >
                   Request a Demo
                 </a>
@@ -199,6 +199,14 @@ export default function GlaucoNovaLabs() {
                 >
                   Learn More
                 </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 py-6 text-gray-700 border-gray-300 hover:bg-gray-50 bg-transparent"
+                  onClick={() => scrollToSection("technology")}
+                >
+                  Watch Demo Video
+                </Button>
               </motion.div>
 
               {/* Metrics Row */}
@@ -209,7 +217,7 @@ export default function GlaucoNovaLabs() {
                 className="grid grid-cols-3 gap-6"
               >
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold gradient-text">94.7%</div>
+                  <div className="text-2xl md:text-3xl font-bold gradient-text">92%</div>
                   <div className="text-sm text-gray-500">Accuracy</div>
                 </div>
                 <div className="text-center">
@@ -355,19 +363,37 @@ export default function GlaucoNovaLabs() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">Our Team</h3>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {[
                 {
                   name: "Soham Chakraborty",
-                  role: "Founder/CEO",
-                  bio: "Soham has extensive BioE research and familial experience with ocular diseases. Experimentation, Product, and Growth Strategy.",
+                  role: "Co-Founder/CEO",
+                  bio: "Berkeley Bioengineering & Haas School of Business. Product Design, Growth Strategy & Clinical Testing.",
                   image: "/team-photos/soham.jpg",
                 },
                 {
-                  name: "Jeffery Zhang",
-                  role: "CTO",
-                  bio: "Jeffrey is knowledgable about PCB Design and Software. Software Development, Prototype Design, and Engineering.",
-                  image: "/team-photos/jeff.jpg",
+                  name: "Neil Goradia",
+                  role: "Co-Founder/CTO",
+                  bio: "Berkeley Electrical Engineering & Computer Science. Hardware prototyping, PCB Design, IoT & CAD modelling.",
+                  image: "/team-photos/neil.jpg",
+                },
+                {
+                  name: "Dr. John Flanagan",
+                  role: "Senior R&D Advisor",
+                  bio: "Ex-Dean of Berkeley's College of Optometry. Human testing, IRB, Lab Space & Growth.",
+                  image: "/team-photos/john.jpg",
+                },
+                {
+                  name: "George Tanaka",
+                  role: "M.D. Strategic Advisor",
+                  bio: "Glaucoma Specialist & Refractive Cataract Surgeon. Clinical Validation, Sourcing Patient Testimonials & Growth.",
+                  image: "/team-photos/george.jpg",
+                },
+                {
+                  name: "Dan Kim",
+                  role: "Legal Advisor",
+                  bio: "Partner Orrick, Herrington & Sutcliffe LLP. IP Acquisition & Entity Incorporation.",
+                  image: "/team-photos/dan.jpg",
                 },
               ].map((member, index) => (
                 <motion.div
@@ -386,7 +412,7 @@ export default function GlaucoNovaLabs() {
                       />
                       <h4 className="font-bold text-lg text-gray-800 mb-1">{member.name}</h4>
                       <p className="gradient-text font-medium mb-3">{member.role}</p>
-                      <p className="text-sm text-gray-600 leading-relaxed flex-grow">{member.bio}</p>
+                      <p className="text-sm text-gray-600 leading-relaxed grow">{member.bio}</p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -403,14 +429,39 @@ export default function GlaucoNovaLabs() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-black mb-6">
+            <h2 className="text-4xl md:text-5xl font-black mb-8 text-center">
               <span className="gradient-text">Our Technology</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto text-pretty leading-relaxed">
-              Our innovation, GlaucoSolve Glasses is a non-invasive, wearable, cost-effective, and remote monitoring solution that uses ultrasound transducers, receivers, and Arduino modules to monitor IOP. By applying acoustic force to the cornea and analyzing the reflected signal, we can compute various ultrasound parameters and correlate them to get the patient's eye pressure. Realtime data will be sent to a mobile app allowing physicians to monitor long-term glaucoma progression remotely and alerting patients on when they should apply eye drops, mitigating optic nerve damage. Moreover, we plan to develop a model with collected data, offering AI insights into glaucoma diagnosis. By learning nuanced IOP patterns in patients with all stages of glaucoma, it allows our model to help ophthalmologists spot signs of glaucoma and predict patients' future IOP trajectory to evaluate the effectiveness of treatments just days after prescription.
-            </p>
+            <div className="grid lg:grid-cols-2 gap-8 items-start">
+              {/* Left side - Text and Image */}
+              <div className="space-y-6">
+                <p className="text-lg text-gray-600 text-pretty leading-relaxed">
+                  Our innovation, GlaucoSolve Glasses is a non-invasive, wearable, cost-effective, and remote monitoring solution that uses ultrasound transducers, receivers, and Arduino modules to monitor IOP. By applying acoustic force to the cornea and analyzing the reflected signal, we can compute various ultrasound parameters and correlate them to get the patient's eye pressure. Realtime data will be sent to a mobile app allowing physicians to monitor long-term glaucoma progression remotely and alerting patients on when they should apply eye drops, mitigating optic nerve damage. Moreover, we plan to develop a model with collected data, offering AI insights into glaucoma diagnosis. By learning nuanced IOP patterns in patients with all stages of glaucoma, it allows our model to help ophthalmologists spot signs of glaucoma and predict patients' future IOP trajectory to evaluate the effectiveness of treatments just days after prescription.
+                </p>
+                <div className="flex justify-center">
+                  <img
+                    src="/science/glasses-flowchart.png"
+                    alt="GlaucoSolve Glasses Flowchart"
+                    className="rounded-xl shadow-lg max-w-full"
+                  />
+                </div>
+              </div>
+              
+              {/* Right side - YouTube Video */}
+              <div className="flex items-center justify-center">
+                <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                  <iframe
+                    src="https://www.youtube.com/embed/7c8ft358wTA"
+                    title="GlaucoNova Labs Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           {/* Prototype Images */}
@@ -422,7 +473,7 @@ export default function GlaucoNovaLabs() {
             className="mb-16"
           >
             <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">Our Prototypes</h3>
-            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               <Card className="glass-light floating-card shadow-lg">
                 <CardContent className="p-4">
                   <img
@@ -443,8 +494,18 @@ export default function GlaucoNovaLabs() {
                   <h4 className="font-bold text-sm text-gray-800 text-center">Physical Prototype</h4>
                 </CardContent>
               </Card>
+              <Card className="glass-light floating-card shadow-lg">
+                <CardContent className="p-4">
+                  <img
+                    src="/prototypes/v2.png"
+                    alt="V2 Prototype"
+                    className="rounded-lg w-full mb-3 max-h-40 object-contain"
+                  />
+                  <h4 className="font-bold text-sm text-gray-800 text-center">V2 Prototype</h4>
+                </CardContent>
+              </Card>
             </div>
-            <div className="grid md:grid-cols-2 gap-6 mt-6 max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 mt-6 max-w-5xl mx-auto">
               <Card className="glass-light floating-card shadow-lg">
                 <CardContent className="p-4">
                   <img
@@ -463,6 +524,16 @@ export default function GlaucoNovaLabs() {
                     className="rounded-lg w-full mb-3 max-h-40 object-contain"
                   />
                   <h4 className="font-bold text-sm text-gray-800 text-center">Mobile App Interface</h4>
+                </CardContent>
+              </Card>
+              <Card className="glass-light floating-card shadow-lg">
+                <CardContent className="p-4">
+                  <img
+                    src="/prototypes/v2-demo.png"
+                    alt="V2 Demo"
+                    className="rounded-lg w-full mb-3 max-h-40 object-contain"
+                  />
+                  <h4 className="font-bold text-sm text-gray-800 text-center">V2 Demo</h4>
                 </CardContent>
               </Card>
             </div>
@@ -491,6 +562,7 @@ export default function GlaucoNovaLabs() {
 
           {/* Science Behind Technology */}
           <motion.div
+            id="science-behind"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -573,54 +645,53 @@ export default function GlaucoNovaLabs() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8 items-start">
-              <div className="flex justify-center"> {/* Added flex and justify-center to center the image */}
-                <img
-                  src="/experimental/experimental-setup.png"
-                  alt="Experimental Setup"
-                  className="rounded-xl shadow-lg w-64 h-auto object-contain md:w-80" // Adjusted width, added h-auto and object-contain
-                />
-              </div>
-              <div className="space-y-4"> {/* Reduced space-y from 6 to 4 */}
+              <div className="space-y-4">
+                <div className="flex justify-center">
+                  <img
+                    src="/experimental/experimental-setup.png"
+                    alt="Experimental Setup"
+                    className="rounded-xl shadow-lg w-64 h-auto object-contain md:w-80"
+                  />
+                </div>
                 <Card className="glass-light floating-card shadow-lg">
-                  <CardContent className="p-4"> {/* Reduced padding from p-6 to p-4 */}
+                  <CardContent className="p-4">
+                    <img
+                      src="/experimental/figure4.png"
+                      alt="Figure 4: Correlation between time of ultrasound flight in air and true IOP"
+                      className="rounded-lg w-full mb-2 max-h-40 object-contain"
+                    />
+                    <p className="text-xs text-gray-600">
+                      <strong>Figure 4:</strong> Correlation between time of ultrasound flight in air and true IOP. The time of flight is inversely proportional to IOP, with an 82.2% correlation.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+              <div className="space-y-4">
+                <Card className="glass-light floating-card shadow-lg">
+                  <CardContent className="p-4">
                     <img
                       src="/experimental/figure2.png"
                       alt="Figure 2: Correlation between corneal displacement and true IOP"
-                      className="rounded-lg w-full mb-2 max-h-40 object-contain" // Adjusted max-h, mb, and added object-contain
+                      className="rounded-lg w-full mb-2 max-h-40 object-contain"
                     />
-                    <p className="text-xs text-gray-600"> {/* Reduced text size to xs */}
+                    <p className="text-xs text-gray-600">
                       <strong>Figure 2:</strong> Correlation between corneal displacement and true IOP. Deformation under ultrasound is inversely proportional to IOP with 75.36% correlation.
                     </p>
                   </CardContent>
                 </Card>
                 <Card className="glass-light floating-card shadow-lg">
-                  <CardContent className="p-4"> {/* Reduced padding from p-6 to p-4 */}
+                  <CardContent className="p-4">
                     <img
                       src="/experimental/figure3.png"
                       alt="Figure 3: Correlation between ultrasound amplitude and true IOP"
-                      className="rounded-lg w-full mb-2 max-h-40 object-contain" // Adjusted max-h, mb, and added object-contain
+                      className="rounded-lg w-full mb-2 max-h-40 object-contain"
                     />
-                    <p className="text-xs text-gray-600"> {/* Reduced text size to xs */}
+                    <p className="text-xs text-gray-600">
                       <strong>Figure 3:</strong> Correlation between ultrasound amplitude and true IOP. Amplitude, the maximum ultrasound signal reflected, is proportional to IOP with 92.06% correlation.
                     </p>
                   </CardContent>
                 </Card>
               </div>
-            </div>
-
-            <div className="flex justify-center"> {/* Added flex and justify-center to center the image */}
-              <Card className="glass-light floating-card shadow-lg max-w-md"> {/* Added max-w-md to limit card width */}
-                <CardContent className="p-4"> {/* Reduced padding from p-6 to p-4 */}
-                  <img
-                    src="/experimental/figure4.png"
-                    alt="Figure 4: Correlation between time of ultrasound flight in air and true IOP"
-                    className="rounded-lg w-full mb-2 max-h-40 object-contain" // Adjusted max-h, mb, and added object-contain
-                  />
-                  <p className="text-xs text-gray-600"> {/* Reduced text size to xs */}
-                    <strong>Figure 4:</strong> Correlation between time of ultrasound flight in air and true IOP. The time of flight is inversely proportional to IOP, with an 82.2% correlation.
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </motion.div>
 
@@ -655,222 +726,11 @@ export default function GlaucoNovaLabs() {
             </div>
           </motion.div>
 
-          {/* References */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">References</h3>
-            <Card className="glass-light floating-card shadow-lg">
-              <CardContent className="p-8">
-                <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
-                  <p>Baker, L., Mansouri, K., Quigley, H. A., & Sit, A. J. (2016). Update on 24-Hour IOP Monitoring. American Academy of Ophthalmology. <a href="https://www.aao.org/eyenet/article/update-on-24-hour-iop-monitoring" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.aao.org/eyenet/article/update-on-24-hour-iop-monitoring</a></p>
-                  
-                  <p>Enabnit, A. (2023, July 10). Applanation Tonometry: Procedure and Uses. DoveMed. Retrieved January 29, 2024, from <a href="https://www.dovemed.com/health-topics/focused-health-topics/applanation-tonometry-procedure-and-uses" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.dovemed.com/health-topics/focused-health-topics/applanation-tonometry-procedure-and-uses</a></p>
-                  
-                  <p>Farhood, Q. K. (2012, December 27). Comparative evaluation of intraocular pressure with an air-puff tonometer versus a Goldmann applanation tonometer. NIH. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3534293/" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3534293/</a></p>
-                  
-                  <p>Goel, M. (2010, September 3). Aqueous Humor Dynamics: A Review - PMC. NCBI. Retrieved January 30, 2024, from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3032230/" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3032230/</a></p>
-                  
-                  <p>Hg, I., Hashimoto, M., & Hung, J.-H. (2021, November 4). Description. EyeKnow. Retrieved December 13, 2023, from <a href="https://2020.igem.org/Team:NCKU_Tainan/Description" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://2020.igem.org/Team:NCKU_Tainan/Description</a></p>
-                  
-                  <p>Jonas, J. B. (2018, May 17). Intraocular pressure and its normal range adjusted for ocular and systemic parameters. The Beijing Eye Study 2011. NCBI. Retrieved January 30, 2024, from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5957383/" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5957383/</a></p>
-                  
-                  <p>Kalayoglu, M. V. (2007, November 20). 180 Years of Evolution of the Tonometer. OphthalmologyWeb. Retrieved January 29, 2024, from <a href="https://www.ophthalmologyweb.com/Tech-Spotlights/26468-180-Years-of-Evolution-of-the-Tonometer/" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.ophthalmologyweb.com/Tech-Spotlights/26468-180-Years-of-Evolution-of-the-Tonometer/</a></p>
-                  
-                  <p>Kaleem, M. (n.d.). Glaucoma. Johns Hopkins Medicine. <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/glaucoma" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.hopkinsmedicine.org/health/conditions-and-diseases/glaucoma</a></p>
-                  
-                  <p>Kendall, J., & Faragher, J. (2007, October 10). Ultrasound-guided central venous access: A homemade phantom for simulation. ResearchGate. <a href="https://www.researchgate.net/publication/5909055_Ultrasound-guided_central_venous_access_A_homemade_phantom_for_simulation" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.researchgate.net/publication/5909055_Ultrasound-guided_central_venous_access_A_homemade_phantom_for_simulation</a></p>
-                  
-                  <p>Lee, H., Jeong, E., Sung, J., Choi, B., & Jeong, J. (2021, March 7). An Intraocular Pressure Measurement Technique Based on Acoustic Radiation Force Using an Ultrasound Transducer: A Feasibility Study. NIH. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7961774/" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7961774/</a></p>
-                  
-                  <p>Martínez, J. (2022, October 3). Tonometry Technology Growing in Leaps and Rebounds. The Ophthalmologist. <a href="https://theophthalmologist.com/business-profession/dr-martinez-de-la-casa-on-his-use-of-icare-rebound-tonometers" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://theophthalmologist.com/business-profession/dr-martinez-de-la-casa-on-his-use-of-icare-rebound-tonometers</a></p>
-                  
-                  <p>National Glaucoma Research. (2021, July 14). Glaucoma: Facts & Figures. BrightFocus. <a href="https://www.brightfocus.org/glaucoma/article/glaucoma-facts-figures" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.brightfocus.org/glaucoma/article/glaucoma-facts-figures</a></p>
-                  
-                  <p>Palko, J., & Realini, T. (2023, November 5). Chapter 9 - The role of circadian and extrinsic intraocular pressure fluctuations. ScienceDirect. <a href="https://www.sciencedirect.com/science/article/pii/B9780323884426000236" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/B9780323884426000236</a></p>
-                  
-                  <p>Ruberto, C., Stefano, A., & Comelli, A. (2022, October 8). Using an Ultrasound Tissue Phantom Model for Hybrid Training of Deep Learning Models for Shrapnel Detection. NIH. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9604600/" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9604600/</a></p>
-                  
-                  <p>Salvetat, M., Zeppieri, M., Miani, F., Tosoni, C., Parisi, L., & Brusini, P. (2011, May 25). Comparison of iCare tonometer and Goldmann applanation tonometry in normal corneas and in eyes with automated lamellar and penetrating keratoplasty. NIH. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3171271/" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3171271/</a></p>
-                  
-                  <p>Susanna, R., Moraes, C., Cioffi, G., & Ritch, R. (2015, March 9). Why Do People (Still) Go Blind from Glaucoma? NIH. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4354096/" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4354096/</a></p>
-                  
-                  <p>Usgaonkar, U., Naik, R., & Shetty, A. (2023, November 5). The economic burden of glaucoma on patients. Indian Journal of Ophthalmology. <a href="https://journals.lww.com/ijo/fulltext/2023/02000/the_economic_burden_of_glaucoma_on_patients.50.aspx" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://journals.lww.com/ijo/fulltext/2023/02000/the_economic_burden_of_glaucoma_on_patients.50.aspx</a></p>
-                  
-                  <p>Zeppieri, M., & Gurnani, B. (2023, June 11). Applanation Tonometry. NIH. <a href="https://www.ncbi.nlm.nih.gov/books/NBK582132/" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/books/NBK582132/</a></p>
-                  
-                  <p>Zhang, J., Zhang, Y., & Li, Y. (2017, May 31). Correlation of IOP with Corneal Acoustic Impedance in Porcine Eye Model. BioMed Research International. <a href="https://www.hindawi.com/journals/bmri/2017/2959717/" className="text-cyan-600 hover:text-cyan-700 underline" target="_blank" rel="noopener noreferrer">https://www.hindawi.com/journals/bmri/2017/2959717/</a></p>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+          
         </div>
       </section>
 
-      <section id="research" className="py-20 bg-gray-50">
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" />
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-black mb-6">
-              <span className="gradient-text">Research & Validation</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Our technology is backed by rigorous scientific research and clinical validation, ensuring accuracy and
-              reliability you can trust.
-            </p>
-          </motion.div>
-
-          {/* Glowing divider */}
-          <div className="glowing-divider mb-16" />
-
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold text-card-foreground mb-6">Clinical Results</h3>
-              <div className="space-y-6">
-                <div className="glass p-6 rounded-xl border-white/30 floating-card">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-card-foreground font-medium">Detection Accuracy</span>
-                    <span className="text-2xl font-bold gradient-text">92.6%</span>
-                  </div>
-                  <div className="w-full bg-white/30 rounded-full h-2">
-                    <div
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full"
-                      style={{ width: "94.7%" }}
-                    />
-                  </div>
-                </div>
-
-                <div className="glass p-6 rounded-xl border-white/30 floating-card">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-card-foreground font-medium">Early Detection Rate</span>
-                    <span className="text-2xl font-bold gradient-text">87.3%</span>
-                  </div>
-                  <div className="w-full bg-white/30 rounded-full h-2">
-                    <div
-                      className="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full"
-                      style={{ width: "87.3%" }}
-                    />
-                  </div>
-                </div>
-
-                <div className="glass p-6 rounded-xl border-white/30 floating-card">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-card-foreground font-medium">Patient Satisfaction</span>
-                    <span className="text-2xl font-bold gradient-text">96.2%</span>
-                  </div>
-                  <div className="w-full bg-white/30 rounded-full h-2">
-                    <div
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full"
-                      style={{ width: "96.2%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold text-card-foreground mb-6">Scientific Foundation</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Our research is built on decades of ophthalmological science and cutting-edge AI development. We've
-                conducted extensive clinical trials with leading medical institutions to validate our technology's
-                effectiveness and safety.
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full" />
-                  <span className="text-card-foreground">3-year longitudinal study with 2,500+ participants</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full" />
-                  <span className="text-card-foreground">FDA breakthrough device designation</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full" />
-                  <span className="text-card-foreground">Published in 12+ peer-reviewed journals</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full" />
-                  <span className="text-card-foreground">Collaboration with 15+ medical centers</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Another glowing divider */}
-          <div className="glowing-divider mb-16" />
-
-          {/* Publications Section with glassmorphism cards */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold text-center text-card-foreground mb-8">Recent Publications</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  title: "AI-Powered Glaucoma Detection in Wearable Devices: A Clinical Validation Study",
-                  journal: "Journal of Medical Internet Research",
-                  year: "2024",
-                },
-                {
-                  title: "Continuous Intraocular Pressure Monitoring: Breakthrough in Early Glaucoma Detection",
-                  journal: "Ophthalmology Science",
-                  year: "2024",
-                },
-                {
-                  title: "Machine Learning Applications in Preventive Eye Care: A Systematic Review",
-                  journal: "Nature Digital Medicine",
-                  year: "2023",
-                },
-                {
-                  title: "Wearable Technology for Chronic Disease Management: Focus on Glaucoma",
-                  journal: "IEEE Transactions on Biomedical Engineering",
-                  year: "2023",
-                },
-              ].map((publication, index) => (
-                <motion.div
-                  key={publication.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="glass floating-card border-white/30 shadow-lg">
-                    <CardContent className="p-6">
-                      <h4 className="font-bold text-card-foreground mb-2 text-balance">{publication.title}</h4>
-                      <p className="gradient-text font-medium mb-1">{publication.journal}</p>
-                      <p className="text-muted-foreground text-sm">{publication.year}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
 
       <section id="contact" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -973,7 +833,7 @@ export default function GlaucoNovaLabs() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg shadow-cyan-500/25"
+                      className="w-full bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg shadow-cyan-500/25"
                     >
                       Send Message
                     </Button>
