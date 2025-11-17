@@ -453,7 +453,7 @@ export default function GlaucoNovaLabs() {
               <div className="flex items-center justify-center">
                 <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                   <iframe
-                    src="https://www.youtube.com/watch?v=goEUu3CiZpk"
+                    src="https://www.youtube.com/embed/goEUu3CiZpk?si=O5SzCpWocyEQCntr"
                     title="GlaucoNova Labs Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
