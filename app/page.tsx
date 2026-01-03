@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Eye, Shield, Zap, Users, Mail, Phone, MapPin, Menu, X, Linkedin, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
-import Glasses3DViewer from "@/components/Glasses3DViewer"
+import Glasses3DViewer from "../components/Glasses3DViewer"
 
 function Counter({ target, duration = 2000, prefix = "", suffix = "", className = "", style }: { target: number; duration?: number; prefix?: string; suffix?: string; className?: string; style?: React.CSSProperties }) {
   const [count, setCount] = useState(0)
