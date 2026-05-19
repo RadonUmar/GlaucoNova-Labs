@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Eye, Shield, Zap, Users, Mail, Phone, MapPin, Menu, X, Linkedin, ChevronLeft, ChevronRight } from "lucide-react"
+import { Eye, Shield, Zap, Users, Mail, Phone, MapPin, Menu, X, Linkedin } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
-import Glasses3DViewer from "@/components/Glasses3DViewer"
+import Glasses3DViewer from "../components/Glasses3DViewer"
 
 function Counter({ target, duration = 2000, prefix = "", suffix = "", className = "", style }: { target: number; duration?: number; prefix?: string; suffix?: string; className?: string; style?: React.CSSProperties }) {
   const [count, setCount] = useState(0)
@@ -88,7 +88,6 @@ function Counter({ target, duration = 2000, prefix = "", suffix = "", className 
 
 export default function GlaucoNovaLabs() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [testimonialPage, setTestimonialPage] = useState(0)
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
@@ -298,7 +297,7 @@ export default function GlaucoNovaLabs() {
         </div>
       </header>
 
-      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-white pt-16 overflow-x-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-white overflow-x-hidden pt-24 md:pt-16" style={{ paddingTop: 'clamp(6rem, calc(4rem + 1cm + 2rem), calc(4rem + 1cm))' }}>
         {/* Subtle floating elements for visual interest */}
         <motion.div
           animate={{
@@ -563,83 +562,32 @@ export default function GlaucoNovaLabs() {
             transition={{ delay: 1.2, duration: 0.8 }}
             className="mt-16"
           >
-            <div className="relative max-w-6xl mx-auto">
-              {/* Left Arrow - Only show when on second page */}
-              {testimonialPage === 1 && (
-                <button
-                  onClick={() => setTestimonialPage(0)}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors"
-                  style={{ border: "2px solid #006c73" }}
-                >
-                  <ChevronLeft className="w-6 h-6" style={{ color: "#006c73" }} />
-                </button>
-              )}
-              
+            <div className="max-w-6xl mx-auto">
               {/* Testimonials Grid */}
               <div className="grid md:grid-cols-3 gap-8">
-                {testimonialPage === 0 ? (
-                  // First batch: flanny, devin, kimberly
-                  <>
-                    <div className="flex items-center justify-center">
-                      <img
-                        src="/team-photos/comment_flanny.png"
-                        alt="Flanny Testimonial"
-                        className="w-full max-w-sm rounded-lg shadow-lg"
-                      />
-                    </div>
-                    <div className="flex items-center justify-center">
-                      <img
-                        src="/team-photos/comment_devin.png"
-                        alt="Devin Testimonial"
-                        className="w-full max-w-sm rounded-lg shadow-lg"
-                      />
-                    </div>
-                    <div className="flex items-center justify-center">
-                      <img
-                        src="/team-photos/comment_kimberly.png"
-                        alt="Kimberly Testimonial"
-                        className="w-full max-w-sm rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </>
-                ) : (
-                  // Second batch: albert, nathan, tanaka
-                  <>
-                    <div className="flex items-center justify-center">
-                      <img
-                        src="/team-photos/comment_albert.png"
-                        alt="Albert Testimonial"
-                        className="w-full max-w-sm rounded-lg shadow-lg"
-                      />
-                    </div>
-                    <div className="flex items-center justify-center">
-                      <img
-                        src="/team-photos/comment_nathan.png"
-                        alt="Nathan Testimonial"
-                        className="w-full max-w-sm rounded-lg shadow-lg"
-                      />
-                    </div>
-                    <div className="flex items-center justify-center">
-                      <img
-                        src="/team-photos/comment_tanaka.png"
-                        alt="Tanaka Testimonial"
-                        className="w-full max-w-sm rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </>
-                )}
+                <div className="flex items-center justify-center">
+                  <img
+                    src="/team-photos/comment_flanny.png"
+                    alt="John Flanagan testimonial"
+                    className="w-full max-w-sm rounded-lg shadow-lg"
+                  />
+                </div>
+                <div className="flex items-center justify-center">
+                  <img
+                    src="/team-photos/comment_kimberly.png"
+                    alt="Kimberly Chia testimonial"
+                    className="w-full max-w-sm rounded-lg shadow-lg"
+                  />
+                </div>
+                <div className="flex items-center justify-center">
+                  <img
+                    src="/team-photos/comment_tanaka.png"
+                    alt="George Tanaka testimonial"
+                    className="w-full max-w-sm rounded-lg shadow-lg"
+                  />
+                </div>
               </div>
 
-              {/* Right Arrow - Only show when on first page */}
-              {testimonialPage === 0 && (
-                <button
-                  onClick={() => setTestimonialPage(1)}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors"
-                  style={{ border: "2px solid #006c73" }}
-                >
-                  <ChevronRight className="w-6 h-6" style={{ color: "#006c73" }} />
-                </button>
-              )}
             </div>
           </motion.div>
         </div>
@@ -709,7 +657,7 @@ export default function GlaucoNovaLabs() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="mb-16"
-              style={{ marginTop: '-1cm' }}
+              style={{ marginTop: 'clamp(2rem, -1cm, -1cm)' }}
             >
               <h4 className="font-bold text-xl mb-4" style={{ color: "#006c73", fontFamily: "'Canva Sans', 'Inter', sans-serif" }}>
                 So, what exists?
@@ -796,7 +744,7 @@ export default function GlaucoNovaLabs() {
               </div>
 
               {/* The Result Section */}
-              <div className="flex flex-col md:flex-row items-center justify-between gap-8" style={{ marginTop: '-0.5cm' }}>
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8" style={{ marginTop: 'clamp(3rem, -0.5cm, -0.5cm)' }}>
                 <div className="flex flex-col items-start">
                   <p className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "#163b42" }}>
                     The Result? 1/5 go <span style={{ color: "#EF5350" }}>blind</span>
